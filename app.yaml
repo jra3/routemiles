@@ -1,0 +1,15 @@
+application: routemiles
+version: 4
+runtime: python
+api_version: 1
+default_expiration: "100d"
+
+handlers:
+- url: /gm
+  static_dir: gm
+
+- url: /.*
+  script: main.py
+
+builtins:
+- remote_api: on
